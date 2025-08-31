@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Financial Report Web Application
+This is a web-based financial analysis tool that allows users to upload a PhonePe transaction statement in .xlsx format and receive an intelligent, categorized expenditure report. The application uses a Next.js backend to parse the file and the Gemini API to analyze the data, providing both a visual breakdown and a qualitative summary of spending habits.
+
+## Features
+
+- XLSX File Upload: Securely upload your PhonePe transaction statement in a .xlsx format.
+
+- Intelligent Reporting: The Gemini API analyzes the transaction data to provide accurate categorization of expenditures.
+
+- Dynamic Visualization: A pie chart is generated to visually represent the breakdown of spending by category.
+
+- Qualitative Analysis: Receive a short, human-readable summary of your monthly spending patterns.
+
+- Client-Side API Key: Your Gemini API key is securely handled on the client side and is never stored on the server.
+
+## Technologies Used
+
+- Frontend: React, Next.js, and Tailwind CSS
+
+- Backend: Next.js API Routes
+
+- Data Parsing: xlsx library for parsing XLSX files
+
+- AI Integration: @google/generative-ai SDK for interacting with the Gemini API
+
+- Visualization: react-chartjs-2 for dynamic charts
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to set up and run the project locally.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Prerequisites
+- Node.js (v18 or higher)
+- npm
+
+### Clone the repository
+
+```sh
+git clone https://github.com/Kshitij0O7/expanses-summary
+cd expanses-summary
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install Dependencies
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Install all the necessary packages for both the frontend and backend.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+npm install
+```
 
-## Learn More
+### Obtain a Gemini API Key
 
-To learn more about Next.js, take a look at the following resources:
+You need a Gemini API key to use the intelligent reporting feature.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Go to the [Google AI Studio](https://aistudio.google.com/apikey).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Create a new API key.
 
-## Deploy on Vercel
+### Run the Project
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Start the Next.js development server.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```sh
+npm run dev
+```
